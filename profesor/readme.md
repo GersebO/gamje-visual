@@ -1,4 +1,4 @@
-#Rutas profesor
+## Rutas profesor
 
 Ingresa a la ruta que deseas ir:
 
