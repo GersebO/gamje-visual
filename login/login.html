@@ -1,0 +1,171 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduTech - Login Portal</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #0b1221, #0f1d35);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      width: 100%;
+      background-color: #0b1221;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #1e2a44;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #00c6ff;
+      text-shadow: 0 0 10px #00c6ff88;
+    }
+
+    .login-container {
+      display: flex;
+      max-width: 1000px;
+      margin-top: 2rem;
+      background-color: #111a2e;
+      border-radius: 12px;
+      box-shadow: 0 0 15px rgba(255,255,255,0.05);
+      overflow: hidden;
+    }
+
+    .form-side {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .form-side h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+      color: #00c6ff;
+    }
+
+    .form-group {
+      margin-bottom: 1.2rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: bold;
+    }
+
+    .form-group input {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: none;
+      background-color: #1e2a44;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .form-group input::placeholder {
+      color: #aaa;
+    }
+
+    .action-btn {
+      width: 100%;
+      padding: 0.8rem;
+      background-color: #0072ff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      font-size: 1rem;
+      margin-top: 0.5rem;
+      cursor: pointer;
+    }
+
+    .action-btn:hover {
+      background-color: #005ec2;
+    }
+
+    .extras {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+    }
+
+    .extras a {
+      color: #00c6ff;
+      text-decoration: none;
+      margin-right: 1rem;
+    }
+
+    .extras a:hover {
+      text-decoration: underline;
+    }
+
+    .image-side {
+      flex: 1;
+      background: url('https://cdn.pixabay.com/photo/2015/09/05/20/02/student-925822_1280.jpg') center/cover no-repeat;
+      min-height: 480px;
+    }
+
+    footer {
+      margin-top: 2rem;
+      color: #888;
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 768px) {
+      .login-container {
+        flex-direction: column;
+      }
+
+      .image-side {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EduTech</div>
+</header>
+
+<div class="login-container">
+  <div class="form-side">
+    <h1>Welcome Back</h1>
+    <form>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" placeholder="yourname@example.com" required>
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" placeholder="********" required>
+      </div>
+
+      <button type="submit" class="action-btn">Login</button>
+
+      <div class="extras">
+        <a href="#">Create an Account</a>
+        <a href="#">Forgot Password?</a>
+      </div>
+    </form>
+  </div>
+  <div class="image-side"></div>
+</div>
+
+<footer>
+  © 2025 EduTech. All rights reserved.
+</footer>
+
+</body>
+</html>
