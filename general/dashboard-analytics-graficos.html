@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduSite - Analytics Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background-color: #0b1221;
+      border-bottom: 1px solid #1e2a44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+
+    .dashboard-container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .dashboard-container h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .card {
+      background-color: #111a2e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .card h2 {
+      font-size: 1.1rem;
+      color: #00c6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 1.8rem;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .chart-section {
+      background-color: #111a2e;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+      margin-bottom: 2rem;
+    }
+
+    .chart-title {
+      font-size: 1.2rem;
+      margin-bottom: 1rem;
+      color: #00c6ff;
+    }
+
+    canvas {
+      width: 100% !important;
+      height: 300px !important;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EduSite Admin</div>
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="#">Analytics</a>
+      <a href="#">Users</a>
+      <a href="#">Courses</a>
+    </nav>
+  </header>
+
+  <div class="dashboard-container">
+    <h1>Analytics Dashboard</h1>
+
+    <div class="cards-grid">
+      <div class="card">
+        <h2>Active Students</h2>
+        <p>1,245</p>
+      </div>
+      <div class="card">
+        <h2>Completed Courses</h2>
+        <p>320</p>
+      </div>
+      <div class="card">
+        <h2>Assignments Submitted</h2>
+        <p>8,740</p>
+      </div>
+      <div class="card">
+        <h2>Monthly Revenue</h2>
+        <p>$12,480</p>
+      </div>
+    </div>
+
+    <div class="chart-section">
+      <div class="chart-title">Course Enrollments Over Time</div>
+      <canvas id="enrollmentsChart"></canvas>
+    </div>
+
+    <div class="chart-section">
+      <div class="chart-title">User Engagement by Module</div>
+      <canvas id="engagementChart"></canvas>
+    </div>
+
+  </div>
+
+  <script>
+    const enrollmentsCtx = document.getElementById('enrollmentsChart').getContext('2d');
+    const enrollmentsChart = new Chart(enrollmentsCtx, {
+      type: 'line',
+      data: {
+        labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun'],
+        datasets: [{
+          label: 'Enrollments',
+          data: [120, 180, 240, 200, 260, 310],
+          borderColor: '#00c6ff',
+          backgroundColor: 'rgba(0,198,255,0.2)',
+          fill: true,
+          tension: 0.3
+        }]
+      },
+      options: {
+        scales: {
+          x: { ticks: { color: '#ccc' } },
+          y: { ticks: { color: '#ccc' } }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#ccc'
+            }
+          }
+        }
+      }
+    });
+
+    const engagementCtx = document.getElementById('engagementChart').getContext('2d');
+    const engagementChart = new Chart(engagementCtx, {
+      type: 'bar',
+      data: {
+        labels: ['Module 1', 'Module 2', 'Module 3', 'Module 4', 'Module 5'],
+        datasets: [{
+          label: 'Engagement (minutes)',
+          data: [320, 410, 290, 500, 360],
+          backgroundColor: '#0072ff'
+        }]
+      },
+      options: {
+        scales: {
+          x: { ticks: { color: '#ccc' } },
+          y: { ticks: { color: '#ccc' } }
+        },
+        plugins: {
+          legend: {
+            labels: {
+              color: '#ccc'
+            }
+          }
+        }
+      }
+    });
+  </script>
+
+</body>
+</html>

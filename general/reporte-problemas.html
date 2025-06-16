@@ -1,0 +1,159 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduSite - Report an Issue</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background-color: #0b1221;
+      border-bottom: 1px solid #1e2a44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+
+    .report-panel {
+      padding: 2rem;
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .report-panel h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .report-panel p {
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: bold;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: none;
+      background-color: #1e2a44;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    .submit-btn {
+      background-color: #0072ff;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-btn:hover {
+      background-color: #005ec2;
+    }
+
+    .success-message {
+      margin-top: 1rem;
+      color: #4caf50;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EduSite</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Support</a>
+      <a href="#">Dashboard</a>
+    </nav>
+  </header>
+
+  <div class="report-panel">
+    <h1>Report a Problem</h1>
+    <p>If you’ve encountered a bug or issue in the system, let us know and we’ll take care of it.</p>
+
+    <form id="issueForm">
+      <div class="form-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Your Email</label>
+        <input type="email" id="email" placeholder="you@example.com" required />
+      </div>
+
+      <div class="form-group">
+        <label for="module">Affected Module</label>
+        <select id="module" required>
+          <option value="">Select a module</option>
+          <option value="evaluaciones">Evaluaciones</option>
+          <option value="cursos">Cursos</option>
+          <option value="estudiantes">Estudiantes</option>
+          <option value="pago">Pago</option>
+          <option value="inscripciones">Inscripciones</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="description">Problem Description</label>
+        <textarea id="description" placeholder="Describe the problem in detail..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Submit Report</button>
+      <div class="success-message" id="successMsg">✅ Your issue has been reported successfully!</div>
+    </form>
+  </div>
+
+  <script>
+    document.getElementById("issueForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      document.getElementById("successMsg").style.display = "block";
+      this.reset();
+    });
+  </script>
+
+</body>
+</html>
