@@ -1,0 +1,161 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduSite - Course Forum</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0b1221;
+      border-bottom: 1px solid #1e2a44;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .forum {
+      padding: 2rem;
+    }
+
+    .forum h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .forum p {
+      color: #aaa;
+      margin-bottom: 2rem;
+    }
+
+    .discussion-thread {
+      margin-bottom: 2rem;
+    }
+
+    .post {
+      background-color: #111a2e;
+      border-radius: 8px;
+      padding: 1rem;
+      margin-bottom: 1rem;
+      border-left: 4px solid #0072ff;
+    }
+
+    .post-author {
+      font-weight: bold;
+      color: #00c6ff;
+    }
+
+    .post-time {
+      font-size: 0.85rem;
+      color: #bbb;
+    }
+
+    .post-content {
+      margin-top: 0.5rem;
+      font-size: 0.95rem;
+    }
+
+    .reply-form {
+      background-color: #1e2a44;
+      border-radius: 8px;
+      padding: 1rem;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .reply-form textarea {
+      resize: vertical;
+      border: none;
+      padding: 0.6rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    .reply-form button {
+      background-color: #0072ff;
+      color: white;
+      border: none;
+      padding: 0.5rem 1.2rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .reply-form button:hover {
+      background-color: #0056cc;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EduSite</div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">My Courses</a>
+      <a href="#">Profile</a>
+    </nav>
+  </header>
+
+  <div class="forum">
+    <h1>Forum: Web Development</h1>
+    <p>Discuss doubts, ideas, and share resources with classmates.</p>
+
+    <div class="discussion-thread">
+      <div class="post">
+        <div class="post-author">Juan Perez</div>
+        <div class="post-time">Posted on June 15, 2025 at 10:23 AM</div>
+        <div class="post-content">
+          ¿Alguien puede explicar la diferencia entre flexbox y grid en CSS? Me confunde cuándo usar cada uno.
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">Camila Soto</div>
+        <div class="post-time">Posted on June 15, 2025 at 11:10 AM</div>
+        <div class="post-content">
+          Flexbox es ideal para layouts en una sola dimensión (horizontal o vertical), mientras que Grid es para dos dimensiones (filas y columnas).
+        </div>
+      </div>
+
+      <div class="post">
+        <div class="post-author">Instructor - Prof. Ramírez</div>
+        <div class="post-time">Posted on June 15, 2025 at 12:05 PM</div>
+        <div class="post-content">
+          Les recomiendo revisar el ejemplo del módulo 3. Grid permite estructuras más complejas, pero flexbox es más simple para alineaciones básicas.
+        </div>
+      </div>
+    </div>
+
+    <div class="reply-form">
+      <label for="reply">Your reply:</label>
+      <textarea id="reply" rows="4" placeholder="Write your comment here..."></textarea>
+      <button>Post Reply</button>
+    </div>
+  </div>
+
+</body>
+</html>
