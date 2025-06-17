@@ -1,0 +1,184 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduSite - Student Payment Form</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      background-color: #0b1221;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #1e2a44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      padding: 2rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .intro {
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+
+    .form {
+      background-color: #111a2e;
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.4rem;
+      font-weight: bold;
+    }
+
+    .form-group input, .form-group select {
+      width: 100%;
+      padding: 0.7rem;
+      border-radius: 6px;
+      border: none;
+      background-color: #1e2a44;
+      color: white;
+      font-size: 1rem;
+    }
+
+    .form-group input::placeholder {
+      color: #999;
+    }
+
+    .submit-btn {
+      background-color: #0072ff;
+      border: none;
+      color: white;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .submit-btn:hover {
+      background-color: #005ec2;
+    }
+
+    .success-message {
+      margin-top: 1.5rem;
+      background-color: #1e2a44;
+      padding: 1rem;
+      border-radius: 6px;
+      color: #4caf50;
+      display: none;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EduSite</div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Courses</a>
+    <a href="#">Payments</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h1>Monthly Tuition Payment</h1>
+  <div class="intro">
+    Complete the form below to process your monthly payment securely.
+  </div>
+
+  <form class="form" id="paymentForm">
+    <div class="form-group">
+      <label for="fullName">Full Name</label>
+      <input type="text" id="fullName" placeholder="John Doe" required />
+    </div>
+
+    <div class="form-group">
+      <label for="studentId">Student ID</label>
+      <input type="text" id="studentId" placeholder="STU2023001" required />
+    </div>
+
+    <div class="form-group">
+      <label for="course">Course</label>
+      <select id="course" required>
+        <option value="">Select your course</option>
+        <option value="webdev">Web Development</option>
+        <option value="datasci">Data Science</option>
+        <option value="dbadmin">Database Administration</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="amount">Amount (USD)</label>
+      <input type="number" id="amount" placeholder="150.00" required />
+    </div>
+
+    <div class="form-group">
+      <label for="cardNumber">Card Number</label>
+      <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required />
+    </div>
+
+    <div class="form-group">
+      <label for="expiry">Expiration Date</label>
+      <input type="text" id="expiry" placeholder="MM/YY" required />
+    </div>
+
+    <div class="form-group">
+      <label for="cvv">CVV</label>
+      <input type="password" id="cvv" placeholder="123" required />
+    </div>
+
+    <button type="submit" class="submit-btn">Pay Now</button>
+
+    <div class="success-message" id="successMsg">✅ Payment successfully submitted!</div>
+  </form>
+</div>
+
+<script>
+  const form = document.getElementById('paymentForm');
+  const successMsg = document.getElementById('successMsg');
+  form.addEventListener('submit', function(e) {
+    e.preventDefault();
+    successMsg.style.display = 'block';
+    form.reset();
+  });
+</script>
+
+</body>
+</html>

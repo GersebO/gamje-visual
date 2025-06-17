@@ -1,0 +1,191 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduSite - Home Profesor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      background-color: #0b1221;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid #1e2a44;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 1.5rem;
+    }
+
+    .home-container {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .home-container h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .home-container p {
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .card {
+      background-color: #111a2e;
+      border-radius: 12px;
+      padding: 1.5rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .card h2 {
+      color: #00c6ff;
+      font-size: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .card p {
+      font-size: 0.95rem;
+      color: #ccc;
+    }
+
+    .btn {
+      margin-top: 1rem;
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background-color: #0072ff;
+      border: none;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .btn:hover {
+      background-color: #005ec2;
+    }
+
+    .extras {
+      margin-top: 2rem;
+    }
+
+    .extras h2 {
+      color: #00c6ff;
+      margin-bottom: 1rem;
+    }
+
+    .extras ul {
+      padding-left: 1.2rem;
+    }
+
+    .extras ul li {
+      color: #ccc;
+      margin-bottom: 0.5rem;
+    }
+
+    .banner {
+      background-color: #1e2a44;
+      border-left: 4px solid #00c6ff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+      color: #bbb;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EduSite Profesor</div>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#">Mis Cursos</a>
+    <a href="#">Evaluaciones</a>
+    <a href="#">Asistencia</a>
+    <a href="#">Perfil</a>
+  </nav>
+</header>
+
+<div class="home-container">
+  <h1>Bienvenido, Profesor</h1>
+  <div class="banner">
+    ¡Recuerda subir las notas finales antes del <strong>30 de junio</strong>! Puedes hacerlo desde la sección "Evaluaciones".
+  </div>
+  <p>Gestiona tus cursos, califica evaluaciones, monitorea el progreso de tus estudiantes y mantente al día con tu agenda académica.</p>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Mis Cursos Activos</h2>
+      <p>Tienes 3 cursos activos actualmente. Puedes editar contenido, ver inscritos o cerrar inscripciones.</p>
+      <a href="#" class="btn">Ver Cursos</a>
+    </div>
+
+    <div class="card">
+      <h2>Evaluaciones Pendientes</h2>
+      <p>Hay 12 evaluaciones por revisar. Mantén el ritmo de corrección para cumplir con los plazos académicos.</p>
+      <a href="#" class="btn">Revisar Evaluaciones</a>
+    </div>
+
+    <div class="card">
+      <h2>Mensajes Recientes</h2>
+      <p>4 nuevos mensajes de estudiantes esperan tu respuesta en foros o mensajes directos.</p>
+      <a href="#" class="btn">Ver Mensajes</a>
+    </div>
+
+    <div class="card">
+      <h2>Indicadores Docentes</h2>
+      <p>Tu promedio de calificación es 4.7/5. Consulta los detalles del desempeño por curso.</p>
+      <a href="#" class="btn">Ver Analítica</a>
+    </div>
+
+    <div class="card">
+      <h2>Asistencia Estudiantil</h2>
+      <p>Puedes marcar asistencia y ver el historial por curso. Funcionalidad integrada con evaluaciones.</p>
+      <a href="#" class="btn">Gestionar Asistencia</a>
+    </div>
+
+    <div class="card">
+      <h2>Calendario Académico</h2>
+      <p>Consulta fechas clave, entregas, feriados y reuniones docentes.</p>
+      <a href="#" class="btn">Ver Calendario</a>
+    </div>
+  </div>
+
+  <div class="extras">
+    <h2>Accesos rápidos</h2>
+    <ul>
+      <li><a href="#" class="btn">Crear Nuevo Curso</a></li>
+      <li><a href="#" class="btn">Registrar Evaluación</a></li>
+      <li><a href="#" class="btn">Enviar Notificación Masiva</a></li>
+      <li><a href="#" class="btn">Solicitar Soporte Técnico</a></li>
+    </ul>
+  </div>
+</div>
+
+</body>
+</html>

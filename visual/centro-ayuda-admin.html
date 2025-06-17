@@ -1,0 +1,139 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduSite - Centro de Ayuda Admin</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background-color: #0b1221;
+      border-bottom: 1px solid #1e2a44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+
+    .help-container {
+      padding: 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .help-container h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .help-container p {
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+
+    .faq {
+      background-color: #111a2e;
+      border-radius: 10px;
+      padding: 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+    }
+
+    .faq h2 {
+      font-size: 1.2rem;
+      color: #00c6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .faq p {
+      font-size: 0.95rem;
+      color: #ddd;
+      margin-top: 0;
+    }
+
+    .contact {
+      background-color: #1e2a44;
+      padding: 1.2rem;
+      border-radius: 8px;
+      margin-top: 2rem;
+    }
+
+    .contact p {
+      margin: 0.3rem 0;
+      font-size: 0.95rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="logo">EduSite Admin</div>
+  <nav>
+    <a href="#">Dashboard</a>
+    <a href="#">Soporte</a>
+    <a href="#">Configuración</a>
+  </nav>
+</header>
+
+<div class="help-container">
+  <h1>Centro de Ayuda del Administrador</h1>
+  <p>Encuentra respuestas a preguntas frecuentes, procedimientos clave y soporte para el uso del sistema.</p>
+
+  <div class="faq">
+    <h2>¿Cómo creo, edito o elimino usuarios?</h2>
+    <p>Desde el panel de administración, ve a "Gestión de Usuarios". Allí puedes agregar usuarios manualmente, actualizar roles o desactivarlos temporalmente. Toda modificación queda registrada en el log de actividad.</p>
+  </div>
+
+  <div class="faq">
+    <h2>¿Cómo asigno roles y permisos?</h2>
+    <p>Accede a "Roles y Permisos", selecciona un perfil (estudiante, docente, admin), y asigna funcionalidades específicas como creación de cursos, acceso a reportes o administración de pagos.</p>
+  </div>
+
+  <div class="faq">
+    <h2>¿Cómo puedo monitorear el estado de los microservicios?</h2>
+    <p>Desde el panel "Estado del Sistema", visualizas los microservicios activos (usuarios, cursos, evaluaciones, pagos, inscripciones). Si alguno está inactivo, recibirás alertas en esta sección.</p>
+  </div>
+
+  <div class="faq">
+    <h2>¿Dónde reporto un problema técnico o fallo?</h2>
+    <p>Utiliza el formulario de "Reportar Problemas" disponible en la sección de soporte. Incluye el módulo afectado, una descripción clara y, si es posible, una captura del error.</p>
+  </div>
+
+  <div class="faq">
+    <h2>¿Cómo configuro la plataforma (idioma, zona horaria, seguridad)?</h2>
+    <p>Dirígete a "Configuración" y selecciona la categoría correspondiente. Desde ahí puedes definir el nombre del sistema, el idioma por defecto, políticas de contraseña, y más.</p>
+  </div>
+
+  <div class="faq">
+    <h2>¿Cómo respaldo o restauro los datos?</h2>
+    <p>Desde el menú de configuración avanzada, accede a "Respaldo y Restauración". Puedes descargar copias manuales o activar respaldos automáticos diarios.</p>
+  </div>
+
+  <div class="contact">
+    <p><strong>¿Necesitas más ayuda?</strong></p>
+    <p>Email: soporte@edusite.com</p>
+    <p>Teléfono: +56 9 1234 5678</p>
+    <p>Horario de atención: Lunes a Viernes de 9:00 a 18:00</p>
+  </div>
+</div>
+
+</body>
+</html>

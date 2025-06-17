@@ -1,0 +1,215 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduSite - Microservices Status Dashboard</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      padding: 1rem 2rem;
+      background-color: #0b1221;
+      border-bottom: 1px solid #1e2a44;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      margin-left: 1.5rem;
+      text-decoration: none;
+    }
+
+    .status-panel {
+      padding: 2rem;
+    }
+
+    .status-panel h1 {
+      font-size: 2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .status-panel p {
+      color: #bbb;
+      margin-bottom: 2rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .service-card {
+      background-color: #111a2e;
+      padding: 1.5rem;
+      border-radius: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: 0 0 10px rgba(255,255,255,0.05);
+      border-left: 5px solid #00c6ff;
+      transition: 0.3s ease;
+    }
+
+    .service-name {
+      font-size: 1.3rem;
+      font-weight: bold;
+      color: #00c6ff;
+      margin-bottom: 0.6rem;
+    }
+
+    .status {
+      display: flex;
+      align-items: center;
+      margin: 0.3rem 0;
+    }
+
+    .status-indicator {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      margin-right: 0.5rem;
+    }
+
+    .status-running {
+      background-color: #4caf50;
+    }
+
+    .status-down {
+      background-color: #f44336;
+    }
+
+    .status-pending {
+      background-color: #ffc107;
+    }
+
+    .status-info {
+      font-size: 0.9rem;
+      color: #ccc;
+      margin-bottom: 0.3rem;
+    }
+
+    .button-group {
+      margin-top: 1rem;
+    }
+
+    .button-group button {
+      background-color: #1e2a44;
+      border: 1px solid #0072ff;
+      color: white;
+      padding: 0.4rem 0.8rem;
+      border-radius: 6px;
+      margin-right: 0.5rem;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .button-group button:hover {
+      background-color: #0072ff;
+    }
+
+    .tag {
+      display: inline-block;
+      background-color: #0072ff;
+      padding: 0.2rem 0.6rem;
+      font-size: 0.75rem;
+      border-radius: 12px;
+      margin-left: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EduSite Admin</div>
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="#">Users</a>
+      <a href="#">Microservices</a>
+      <a href="#">Settings</a>
+    </nav>
+  </header>
+
+  <div class="status-panel">
+    <h1>Microservices Status</h1>
+    <p>Monitor the real-time status of all system microservices. Ensure all components are online and performing correctly.</p>
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-name">Evaluaciones <span class="tag">Port 8094</span></div>
+        <div class="status"><div class="status-indicator status-running"></div> Running</div>
+        <div class="status-info">Uptime: 99.98%</div>
+        <div class="status-info">Last Checked: Just now</div>
+        <div class="status-info">Dependencies: DB, Usuarios</div>
+        <div class="button-group">
+          <button>Restart</button>
+          <button>Logs</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-name">Cursos <span class="tag">Port 8099</span></div>
+        <div class="status"><div class="status-indicator status-running"></div> Running</div>
+        <div class="status-info">Uptime: 99.99%</div>
+        <div class="status-info">Last Checked: 1 min ago</div>
+        <div class="status-info">Dependencies: DB</div>
+        <div class="button-group">
+          <button>Restart</button>
+          <button>Logs</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-name">Estudiantes <span class="tag">Port 8095</span></div>
+        <div class="status"><div class="status-indicator status-down"></div> Down</div>
+        <div class="status-info">Last Downtime: 5 minutes ago</div>
+        <div class="status-info">Dependencies: Auth, DB</div>
+        <div class="button-group">
+          <button>Restart</button>
+          <button>Logs</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-name">Pago <span class="tag">Port 8096</span></div>
+        <div class="status"><div class="status-indicator status-running"></div> Running</div>
+        <div class="status-info">Uptime: 100%</div>
+        <div class="status-info">Last Checked: 2 mins ago</div>
+        <div class="status-info">Dependencies: Usuarios, Cursos</div>
+        <div class="button-group">
+          <button>Restart</button>
+          <button>Logs</button>
+        </div>
+      </div>
+
+      <div class="service-card">
+        <div class="service-name">Inscripciones <span class="tag">Port 8098</span></div>
+        <div class="status"><div class="status-indicator status-running"></div> Running</div>
+        <div class="status-info">Uptime: 99.95%</div>
+        <div class="status-info">Last Checked: Just now</div>
+        <div class="status-info">Dependencies: Usuarios, Cursos</div>
+        <div class="button-group">
+          <button>Restart</button>
+          <button>Logs</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

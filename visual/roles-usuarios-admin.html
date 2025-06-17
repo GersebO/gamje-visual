@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EduSite - Roles & Permissions</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0b1221;
+      color: white;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem 2rem;
+      background-color: #0b1221;
+      border-bottom: 1px solid #1e2a44;
+    }
+
+    .logo {
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    nav a {
+      margin-left: 1.5rem;
+      color: white;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .roles-panel {
+      padding: 2rem;
+    }
+
+    .roles-panel h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .role-card {
+      background-color: #111a2e;
+      border-radius: 10px;
+      padding: 1.2rem 1.5rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    }
+
+    .role-title {
+      font-size: 1.3rem;
+      color: #00c6ff;
+      margin-bottom: 0.5rem;
+    }
+
+    .permissions-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .permission {
+      background-color: #1e2a44;
+      border-radius: 6px;
+      padding: 0.5rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    .add-role {
+      margin-top: 2rem;
+      background-color: #0072ff;
+      color: white;
+      padding: 0.7rem 1.2rem;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .add-role:hover {
+      background-color: #005ec2;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">EduSite Admin</div>
+    <nav>
+      <a href="#">Dashboard</a>
+      <a href="#">Users</a>
+      <a href="#">Roles</a>
+      <a href="#">Reports</a>
+    </nav>
+  </header>
+
+  <div class="roles-panel">
+    <h1>Roles & Permissions</h1>
+
+    <div class="role-card">
+      <div class="role-title">Student</div>
+      <div class="permissions-list">
+        <div class="permission">Access enrolled courses</div>
+        <div class="permission">Submit assignments</div>
+        <div class="permission">View grades</div>
+        <div class="permission">Participate in forums</div>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-title">Teacher</div>
+      <div class="permissions-list">
+        <div class="permission">Create and manage courses</div>
+        <div class="permission">Evaluate assignments</div>
+        <div class="permission">Manage forums</div>
+        <div class="permission">Host video classes</div>
+      </div>
+    </div>
+
+    <div class="role-card">
+      <div class="role-title">Administrator</div>
+      <div class="permissions-list">
+        <div class="permission">Manage users</div>
+        <div class="permission">Assign roles</div>
+        <div class="permission">Control site settings</div>
+        <div class="permission">Generate reports</div>
+      </div>
+    </div>
+
+    <button class="add-role">+ Add New Role</button>
+  </div>
+
+</body>
+</html>
